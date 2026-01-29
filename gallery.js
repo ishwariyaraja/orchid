@@ -1,8 +1,10 @@
 // ==============contact side buttuon ======================== */
 
+// ==============contact side buttuon ======================== */
 function openContact(){
   document.getElementById("contactSidebar").classList.add("active");
 }
+
 function closeContact(){
   document.getElementById("contactSidebar").classList.remove("active");
 }
