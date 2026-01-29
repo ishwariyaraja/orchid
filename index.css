@@ -121,7 +121,7 @@ color: #fff;
 .contact-open-btn{
   position:fixed;
   right:20px;
-  bottom:20px;
+  top:20px;
   width:55px;
   height:55px;
   border-radius:50%;
@@ -323,6 +323,7 @@ color: #fff;
   .map-box iframe{
     height:220px;
   }
+
 }
 
 /* Desktop (769px+) */
@@ -331,7 +332,11 @@ color: #fff;
   .contact-sidebar{
     width:380px;
   }
+
 }
+
+
+
 /* contance end */
 
 /* Hero section  start===============================================================*/
