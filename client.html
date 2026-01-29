@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews & Brands Showcase</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- Font Awesome (single correct version) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- css link -->
+ <link rel="stylesheet" href="client.css">
+
+</head>
+<body>
+<!-- Page transition -->
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- Floating icons -->
+<div class="floating-element heart" style="top:15%; left:10%;">❤</div>
+<div class="floating-element ring" style="top:20%; right:15%;">💍</div>
+<div class="floating-element heart" style="bottom:25%; left:15%;">❤</div>
+<div class="floating-element ring" style="bottom:15%; right:10%;">💍</div>
+
+<!-- Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-outline" id="cursorOutline"></div>
+
+<!-- ✅ NEXT PAGE BUTTON (FIXED) -->
+<div id="page">
+  <button class="next-page-btn" onclick="goNext()" aria-label="Next Page">
+ <span class="nbtn">Index</span> <i class="fas fa-arrow-right"></i>
+  </button>
+
+   <button class="next-back-btn" onclick="goBack()" aria-label="Next Page">
+ <i class="fas fa-arrow-left"></i><span class="nbtn">Portfolio</span> 
+  </button>
+</div>
+
+<!-- contact sidebar -->
+<button class="contact-open-btn" onclick="openContact()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<div class="contact-sidebar" id="contactSidebar">
+
+  <!-- Close Button -->
+  <span class="close-btn" onclick="closeContact()">×</span>
+
+  <!-- Header -->
+  <h2 class="contact-title">Get in Touch</h2>
+  <p class="contact-sub">We’d love to hear from you</p>
+
+  <!-- WhatsApp Button -->
+  <a href="#" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    Chat on WhatsApp
+  </a>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+
+  <!-- Email Subscribe -->
+  <div class="subscribe-box">
+    <h4>Subscribe for Updates</h4>
+    <form>
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Map -->
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps?q=Perambalur&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Address (Always Visible) -->
+  <div class="contact-address">
+    <h5>Magnifize Bridal Studio</h5>
+    <p>
+      Perambalur – 621212<br>
+      Tamil Nadu, India
+    </p>
+  </div>
+
+</div>
+<!-- contact end -->
+    <!--hero container -->
+    <div class="container">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="logo" alt="Logo">
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="section-title">
+                <h1>What Our Clients Say</h1>
+            </div>
+
+            <div class="reviews-slider">
+                <div class="swiper reviewSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Review Card 1 -->
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Sarah">
+                                    <div>
+                                        <h3>Sarah & Michael</h3>
+                                        <p>April 2023 Wedding</p>
+                                    </div>
+                                </div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    Absolutely magical! Every detail was perfect. Our wedding felt like a fairytale come to life. The team went above and beyond to make our day special.
+                                </p>
+                                <span class="date">March 15, 2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Review Card 2 -->
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w-300&q=80" alt="James">
+                                    <div>
+                                        <h3>James & Emily</h3>
+                                        <p>June 2023 Wedding</p>
+                                    </div>
+                                </div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    Stunning photography & video. We relive our day every time we watch it. The team captured every emotion perfectly. Worth every penny!
+                                </p>
+                                <span class="date">July 2, 2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Review Card 3 -->
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Jessica">
+                                    <div>
+                                        <h3>Jessica & David</h3>
+                                        <p>August 2023 Wedding</p>
+                                    </div>
+                                </div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="review-text">
+                                    Catering was phenomenal. Guests still talk about the food! The service was impeccable, and everything ran smoothly from start to finish.
+                                </p>
+                                <span class="date">September 10, 2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Review Card 4 -->
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Robert">
+                                    <div>
+                                        <h3>Robert & Angela</h3>
+                                        <p>October 2023 Wedding</p>
+                                    </div>
+                                </div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    Exceptional floral arrangements that exceeded our expectations. The entire venue was transformed into a breathtaking garden.
+                                </p>
+                                <span class="date">November 5, 2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Review Card 5 -->
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Thomas">
+                                    <div>
+                                        <h3>Thomas & Maria</h3>
+                                        <p>December 2023 Wedding</p>
+                                    </div>
+                                </div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    Professional, attentive, and creative team. They understood our vision and brought it to life better than we could have imagined.
+                                </p>
+                                <span class="date">January 12, 2024</span>
+                            </div>
+                        </div>
+
+                        <!-- Review Card 6 -->
+                        <div class="swiper-slide">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Christopher">
+                                    <div>
+                                        <h3>Christopher & Sophia</h3>
+                                        <p>February 2024 Wedding</p>
+                                    </div>
+                                </div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="review-text">
+                                    The coordination was flawless. Everything happened exactly as planned, and we didn't have to worry about a single detail on our big day.
+                                </p>
+                                <span class="date">March 8, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy Couples</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Award Wins</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="brands-section">
+            <div class="section-title">
+                <h1>Our Premium Partners</h1>
+            </div>
+
+            <div class="brands-grid">
+                <!-- Brand Card 1 -->
+                <div class="brand-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/MAC_Cosmetics_logo.svg" alt="MAC Cosmetics">
+                    <h3>MAC Cosmetics</h3>
+                    <p>Flawless bridal finish with long-lasting luxury makeup for your special day.</p>
+                </div>
+
+                <!-- Brand Card 2 -->
+                <div class="brand-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Huda_Beauty_logo.svg" alt="Huda Beauty">
+                    <h3>Huda Beauty</h3>
+                    <p>High-pigment glam for modern bridal transformations that turn heads.</p>
+                </div>
+
+                <!-- Brand Card 3 -->
+                <div class="brand-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Dior_Logo.svg" alt="Dior">
+                    <h3>Dior</h3>
+                    <p>Luxury elegance and timeless bridal beauty with iconic French sophistication.</p>
+                </div>
+
+                <!-- Brand Card 4 -->
+                <div class="brand-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Chanel_logo_interlocking_cs.svg" alt="Chanel">
+                    <h3>Chanel</h3>
+                    <p>Soft, classic makeup perfect for royal bridal looks with timeless charm.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>© 2024 Luxe Weddings & Events. All rights reserved. | Premium wedding planning and coordination services.</p>
+        </footer>
+    </div>
+    <!-- hero end -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="client.js"></script>
+
+   
+</body>
+</html>

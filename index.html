@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Portfolio</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- Font Awesome (single correct version) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- css link -->
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<!-- Page transition -->
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- Floating icons -->
+<div class="floating-element heart" style="top:15%; left:10%;">❤</div>
+<div class="floating-element ring" style="top:20%; right:15%;">💍</div>
+<div class="floating-element heart" style="bottom:25%; left:15%;">❤</div>
+<div class="floating-element ring" style="bottom:15%; right:10%;">💍</div>
+
+<!-- Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-outline" id="cursorOutline"></div>
+
+<!--  NEXT PAGE BUTTON (FIXED) -->
+<div id="page">
+  <button class="next-page-btn" onclick="goNext()" aria-label="Next Page">
+    <span class="nbtn">Next page</span><i class="fas fa-arrow-right">
+    </i>
+  </button>
+</div>
+
+<!-- contact sidebar -->
+<button class="contact-open-btn" onclick="openContact()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<div class="contact-sidebar" id="contactSidebar">
+
+  <!-- Close Button -->
+  <span class="close-btn" onclick="closeContact()">×</span>
+
+  <!-- Header -->
+  <h2 class="contact-title">Get in Touch</h2>
+  <p class="contact-sub">We’d love to hear from you</p>
+
+  <!-- WhatsApp Button -->
+  <a href="#" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    Chat on WhatsApp
+  </a>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+
+  <!-- Email Subscribe -->
+  <div class="subscribe-box">
+    <h4>Subscribe for Updates</h4>
+    <form>
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Map -->
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps?q=Perambalur&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Address (Always Visible) -->
+  <div class="contact-address">
+    <h5>Magnifize Bridal Studio</h5>
+    <p>
+      Perambalur – 621212<br>
+      Tamil Nadu, India
+    </p>
+  </div>
+
+</div>
+<!-- contact end -->
+
+<!-- HERO SECTION START-->
+ <section class="hero" id="heroSection">
+
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" class="logo" alt="Logo">
+
+<h1>SOPHIA & EDWARD</h1>
+
+<div class="date">SEPTEMBER 23, 2028 • BOSTON, MA</div>
+<div class="count" id="countdown">1600 DAYS TO GO</div>
+
+<nav class="nav" id="navMenu">
+  <a href="index.html">Home</a>
+  <a href="service.html">Our Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="client.html">Client Review</a>
+</nav>
+<!-- 
+<div class="image-section">
+
+  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80" alt="Couple">
+</div> -->
+<div class="image-section">
+  <div class="image-box"></div>
+</div>
+
+</section>  
+ <!-- HERO SECTION END-->
+
+<!-- js link -->
+<script src="index.js"></script>
+</body>
+</html>

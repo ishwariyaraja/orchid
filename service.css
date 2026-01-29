@@ -1,0 +1,645 @@
+
+    /* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+/* color: #fff; */
+}
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  animation: fadeInDown 1.5s;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+/* ================= PAGE TRANSITION ================= */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  /* background: #1d6c78; */
+  z-index: 9999;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s ease;
+}
+.page-transition.active { transform: scaleX(1); }
+
+/* ================= FLOATING ICONS ================= */
+.floating-element {
+  position: fixed;
+  font-size: 38px;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ================= CURSOR ================= */
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 10000;
+}
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+}
+.cursor-outline {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  transition: all 0.15s ease-out;
+}
+/* ================= NEXT PAGE BUTTON ================= */
+.next-page-btn,.next-back-btn{
+  position: fixed;
+  transform: translateY(-50%);
+    width: 160px;
+    height: 50px;
+  border-radius: 10px;
+  background: transparent;
+  color: gray;
+  border: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.next-page-btn{
+ top: 50%;
+ right: 2%;
+}
+.next-back-btn{
+top: 50%;
+left: 2%;
+}
+
+/* text inside */
+ .next-page-btn .nbtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+ .next-back-btn .nbtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* icon */
+.next-page-btn,.next-back-btn i {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* hover */
+.next-page-btn:hover {
+  background: #B31802;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+.next-page-btn:hover .nbtn{
+  color: #fff;
+
+}
+.next-back-btn:hover .nbtn{
+  color: #fff;
+}
+
+.next-back-btn:hover {
+  background: #B31802;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.next-page-btn:hover i {
+  transform: translateX(5px);
+}
+.next-back-btn:hover i {
+  transform: translateX(-5px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  animation: fadeInDown 1.5s;
+  position: absolute;
+  z-index: 999;
+  top: 5%;
+  left: 5%;
+}
+.next-back-btn{
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    width: 160px;
+    height: 50px;
+    border-radius: 12px;
+    background: transparent;
+    flex-direction:row;
+  } 
+.next-page-btn{
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    width: 160px;
+    height: 50px;
+    border-radius: 12px;
+    background:transparent;
+    flex-direction:row;
+  } 
+  /* text inside */
+ .next-page-btn .nbtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+ .next-back-btn .nbtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+  .next-page-btn,.next-back-btn i {
+    font-size: 16px;
+  }
+/* hover */
+  .next-page-btn:hover {
+  background: #B31802;
+  transform: translateY(0);
+}
+
+.next-back-btn:hover {
+  background: #B31802;
+  transform: translateY(0);
+}
+.next-page-btn:hover .nbtn{
+  color: #fff;
+
+}
+.next-back-btn:hover .nbtn{
+  color: #fff;
+
+}
+
+.next-page-btn:hover i {
+  transform: translateX(5px);
+}
+.next-back-btn:hover i {
+  transform: translateX(-5px);
+}
+  .cursor-dot,.cursor-outline{
+    display: none;
+  }
+
+}
+/* ================= SMALL MOBILE ================= */
+ @media (max-width: 480px) {
+  .next-page-btn {
+    width: 140px;
+    height: 45px;
+  }
+
+  .next-page-btn .nbtn {
+    font-size: 14px;
+  }
+} 
+
+ /* ================= CONTACT FLOAT BTN ================= */
+.contact-open-btn{
+  position:fixed;right:55px;bottom:25px;
+  width:60px;height:60px;border-radius:50%;
+  background:linear-gradient(135deg,#1d6c78);
+  color:#fff;border:none;font-size:22px;
+  cursor:pointer;z-index:1200;
+  box-shadow:0 20px 40px rgba(0,0,0,.35)
+}
+
+/* ================= CONTACT SIDEBAR ================= */
+.contact-sidebar{
+  position:fixed;top:0;right:-450px;
+  width:350px;height:100vh;
+  background:#1d6c78;
+  backdrop-filter:blur(16px);
+  padding:30px;transition:.4s;
+  z-index:1300
+}
+.contact-sidebar.active{right:0}
+
+.close-btn{
+  position:absolute;top:18px;right:25px;color: #fff;
+  width:38px;height:38px;border-radius:50%;
+  background:#1d6c78;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:22px
+}
+
+.input-box{position:relative;margin-bottom:16px}
+.input-box i{position:absolute;left:14px;top:50%;transform:translateY(-50%)}
+.input-box input,.input-box textarea{
+  width:100%;padding:14px 14px 14px 40px;
+  border-radius:10px;border:1px solid #ddd
+}
+
+.contact-form button{
+  width:100%;padding:14px;border-radius:50px;
+  border:none;background:#1d6c78;color:#fff
+}
+.whatsapp-btn{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+
+}
+.social-icons a{
+    font-size: 20px;
+    color: #fff;
+}
+.subscribe-box h4{
+    font-size: 20px;
+
+}
+.subscribe-box input{
+    display: flex;
+    gap: 0px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.subscribe-box button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #1d6c78;
+}
+.map-box{
+    margin-top: 20px;
+}
+.contact-address h5{
+    font-size: 25px;
+    color: #fff;
+}
+.contact-address p{
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* -------- Tablets -------- */
+@media (max-width: 992px) {
+
+  .contact-open-btn{
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+
+  .contact-sidebar{
+    width: 320px;
+    padding: 25px;
+  }
+
+  .contact-title{
+    font-size: 22px;
+  }
+
+  .contact-sub{
+    font-size: 14px;
+  }
+
+  .contact-address h5{
+    font-size: 22px;
+  }
+
+  .contact-address p{
+    font-size: 16px;
+  }
+}
+
+
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+
+  .contact-open-btn{
+    right: 5%;
+    top: 6%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .contact-sidebar{
+    width: 100%;
+    right: -100%;
+    padding: 20px;
+  }
+
+  .contact-sidebar.active{
+    right: 0;
+  }
+
+  .close-btn{
+    top: 15px;
+    right: 30px;
+    width: 54px;
+    height: 54px;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .whatsapp-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .social-icons{
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+  }
+
+  .subscribe-box h4{
+    font-size: 18px;
+  }
+
+  .subscribe-box input{
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .subscribe-box button{
+    width: 50%;
+    font-size: 15px;
+  }
+
+  .map-box iframe{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .contact-address h5{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .contact-address p{
+    font-size: 15px;
+  }
+}
+
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+
+  .contact-open-btn{
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .contact-title{
+    font-size: 20px;
+  }
+
+  .whatsapp-btn{
+    font-size: 16px;
+  }
+
+  .social-icons a{
+    font-size: 18px;
+  }
+
+  .map-box iframe{
+    height: 150px;
+  }
+}
+/* hero section */
+/* ================= BACKGROUND SECTION ================= */
+.container{
+  min-height:100vh;
+  background:
+ linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+ url("./images/bg2.avif");
+  background-size: cover;
+  background-position: center;
+  padding:100px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= STATIC REVIEW GRID ================= */
+.card{
+  width:100%;
+  max-width:1200px;
+}
+.card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.card h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 3px;
+  bottom: -8px;
+  border-radius: 5px;
+  background-color: gray;
+}
+
+
+.card-col{
+  display:grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap:30px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+/* REVIEW CARD */
+.review-box{
+  background:rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-radius:20px;
+  padding:10px 25px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  display: flex;
+  flex-wrap:nowrap;
+  max-width: 380px;
+}
+
+
+.review-box:nth-child(1){animation-delay:.1s}
+.review-box:nth-child(2){animation-delay:.3s}
+.review-box:nth-child(3){animation-delay:.5s}
+.review-box:nth-child(4){animation-delay:.7s}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+.review-box img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-top:5px;
+  border:3px solid #191C38;
+  animation: fadeUp .9s ease forwards;
+  transition: 0.2s;
+
+}
+
+.review-box p{
+  font-size:14px;
+  line-height:1.5;
+  color:black;
+  padding: 10px;
+  text-align: center;
+  text-align: justify;
+  
+}
+
+.review-box:hover{
+  transform:translateY(-12px) scale(1.03);
+  transition:.4s;
+  box-shadow:0 10px 30px rgba(255,255,255,0.3);
+
+}
+.review-box:hover img{
+  transform: scale(1.1);
+}
+
+/* ================= MOVING REVIEW SLIDER ================= */
+.review-section{
+  /* background:#1f6e79; */
+  padding:60px 0;
+  overflow:hidden;
+  margin-top: 100px;
+}
+
+.review-slider{
+  display:flex;
+  width:max-content;
+  animation: slide 22s linear infinite;
+}
+
+.review-slider:hover{
+  animation-play-state: paused;
+}
+
+.review-card{
+  min-width:280px;
+  background:#fff;
+  border-radius:18px;
+  padding:20px 22px;
+  margin:0 18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.review-card h4{
+  font-size:25px;
+  font-weight:700;
+  color:#191C38;
+  margin-bottom:6px;
+}
+
+.review-card p{
+  font-size:16px;
+  color:black;
+  line-height:1.6;
+}
+
+/* ================= FLOATING ICONS ================= */
+.floating{
+  position:absolute;
+  font-size:30px;
+  opacity:.2;
+  animation:float 7s infinite ease-in-out;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-25px)}
+}
+@keyframes slide{
+  from{ transform:translateX(0) }
+  to{ transform:translateX(-50%) }
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .card-col{ grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:500px){
+  .card-col{ grid-template-columns: 1fr; }
+}
+
+@media(max-width:768px){
+  .review-card{
+    min-width:230px;
+    padding:16px;
+  }
+  .footer{
+  display: block;
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+}
+}

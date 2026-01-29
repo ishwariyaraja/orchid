@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Portfolio</title>
+
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- Font Awesome (single correct version) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- css link -->
+<link rel="stylesheet" href="service.css">
+</head>
+<body>
+<!-- Page transition -->
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- Floating icons -->
+<div class="floating-element heart" style="top:15%; left:10%;">❤</div>
+<div class="floating-element ring" style="top:20%; right:15%;">💍</div>
+<div class="floating-element heart" style="bottom:25%; left:15%;">❤</div>
+<div class="floating-element ring" style="bottom:15%; right:10%;">💍</div>
+
+<!-- Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-outline" id="cursorOutline"></div>
+
+<!-- ✅ NEXT PAGE BUTTON (FIXED) -->
+ <div id="page">
+  <button class="next-page-btn" onclick="goNext()" aria-label="Next Page">
+    <span class="nbtn">Service</span><i class="fas fa-arrow-right">
+    </i>
+  </button>
+     <button class="next-back-btn" onclick="goBack()" aria-label="Next Page">
+ <i class="fas fa-arrow-left"></i><span class="nbtn">Index</span> 
+  </button>
+</div>
+
+
+<!-- contact sidebar -->
+<button class="contact-open-btn" onclick="openContact()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<div class="contact-sidebar" id="contactSidebar">
+
+  <!-- Close Button -->
+  <span class="close-btn" onclick="closeContact()">×</span>
+
+  <!-- Header -->
+  <h2 class="contact-title">Get in Touch</h2>
+  <p class="contact-sub">We’d love to hear from you</p>
+
+  <!-- WhatsApp Button -->
+  <a href="#" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    Chat on WhatsApp
+  </a>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+
+  <!-- Email Subscribe -->
+  <div class="subscribe-box">
+    <h4>Subscribe for Updates</h4>
+    <form>
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Map -->
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps?q=Perambalur&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Address (Always Visible) -->
+  <div class="contact-address">
+    <h5>Magnifize Bridal Studio</h5>
+    <p>
+      Perambalur – 621212<br>
+      Tamil Nadu, India
+    </p>
+  </div>
+
+</div>
+<!-- contact end -->
+
+<!-- HERO SECTION START-->
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="logo" alt="Logo">
+
+  <div class="card">
+      <h1>Our service</h1>
+
+    <div class="card-col">
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <p>Beautiful wedding  quality and elegance.</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/men/34.jpg">
+        <p>Professional team and outstanding service. Truly memorable.</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg">
+        <p>The decor and planning were beyond expectations.</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/men/51.jpg">
+        <p>Luxury feel, smooth coordination, and perfect execution.</p>
+      </div>
+
+    </div>
+
+     <div class="card-col">
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <p>Beautiful wedding quality and elegance.</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/men/34.jpg">
+        <p>Professional team and outstanding service. Truly memorable.</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg">
+        <p>The decor and planning were beyond expectations.</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://randomuser.me/api/portraits/men/51.jpg">
+        <p>Luxury feel, smooth coordination, and perfect execution.</p>
+      </div>
+
+    </div>
+  <section class="review-section">
+  <div class="review-slider">
+
+    <div class="review-card"><h4>Engagement</h4><p>Beautiful pre-wedding memories crafted with love.</p></div>
+    <div class="review-card"><h4>Wedding Day</h4><p>Luxury ceremony moments captured forever.</p></div>
+    <div class="review-card"><h4>Reception</h4><p>Elegant celebration with timeless charm.</p></div>
+    <div class="review-card"><h4>Destination Wedding</h4><p>Dream locations, magical stories.</p></div>
+
+    <!-- DUPLICATE FOR LOOP -->
+    <div class="review-card"><h4>Engagement</h4><p>Beautiful pre-wedding memories crafted with love.</p></div>
+    <div class="review-card"><h4>Wedding Day</h4><p>Luxury ceremony moments captured forever.</p></div>
+    <div class="review-card"><h4>Reception</h4><p>Elegant celebration with timeless charm.</p></div>
+    <div class="review-card"><h4>Destination Wedding</h4><p>Dream locations, magical stories.</p></div>
+
+  </div>
+</section>
+  </div>
+
+  <footer class="footer">
+
+  </footer>
+ 
+</div> 
+ <!-- HERO SECTION END -->
+
+
+<!-- js link -->
+<script src="service.js"></script>
+</body>
+</html>
